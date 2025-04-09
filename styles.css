@@ -1,405 +1,565 @@
-:root {
-  --primary-color: #4a6cf7;
-  --secondary-color: #2e3a59;
-  --text-color: #333;
-  --light-text: #666;
-  --bg-color: #fff;
-  --light-bg: #f5f7fa;
-  --border-color: #e9ecef;
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
+/* 基础样式重置 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9fd;
 }
 
 a {
-  color: var(--primary-color);
-  text-decoration: none;
+    text-decoration: none;
+    color: #3a86ff;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--secondary-color);
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-p {
-  margin-bottom: 1rem;
+ul {
+    list-style: none;
 }
 
 .container {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* 导航栏样式 */
-.header {
-  background-color: var(--bg-color);
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* 头部区域 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3a86ff;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
+nav ul {
+    display: flex;
 }
 
-.nav-links li {
-  margin-left: 2rem;
+nav ul li {
+    margin-left: 25px;
 }
 
-.nav-links a {
-  color: var(--secondary-color);
-  font-weight: 500;
+nav ul li a {
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: var(--primary-color);
-  text-decoration: none;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3a86ff;
 }
 
-/* 英雄区域样式 */
+/* 英雄区域 */
 .hero {
-  padding: 5rem 0;
-  background-color: var(--light-bg);
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, #7209b7, #3a86ff);
+    color: #fff;
+    text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  color: var(--light-text);
-  margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* 按钮样式 */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
-.btn-primary:hover {
-  background-color: #3a5ad9;
-  text-decoration: none;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-}
-
-.btn-outline:hover {
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-}
-
-/* 功能区域样式 */
+/* 特性区域 */
 .features {
-  padding: 5rem 0;
+    padding: 100px 0;
+    background-color: #fff;
 }
 
-.features-heading {
-  text-align: center;
-  margin-bottom: 3rem;
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.features-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #666;
+    font-size: 1.1rem;
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
 }
 
 .feature-card {
-  background-color: var(--bg-color);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  padding: 2rem;
-  transition: transform 0.3s ease;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .feature-card h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #3a86ff;
 }
 
-/* 价格区域样式 */
-.pricing {
-  padding: 5rem 0;
-  background-color: var(--light-bg);
+.feature-card p {
+    color: #666;
 }
 
-.pricing-heading {
-  text-align: center;
-  margin-bottom: 3rem;
+/* 推荐区域 */
+.testimonials {
+    padding: 100px 0;
+    background-color: #f9f9fd;
 }
 
-.pricing-plans {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #333;
 }
 
-.pricing-card {
-  background-color: var(--bg-color);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease;
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
-.pricing-card:hover {
-  transform: translateY(-5px);
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.pricing-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.testimonial-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-style: italic;
 }
 
-.price {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
+.testimonial-author {
+    font-weight: 600;
+    color: #333;
 }
 
-.price small {
-  font-size: 1rem;
-  color: var(--light-text);
+.testimonial-role {
+    color: #777;
+    font-size: 0.9rem;
 }
 
-.pricing-features {
-  list-style: none;
-  margin: 2rem 0;
-  text-align: left;
+/* 联系区域 */
+.contact {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
 }
 
-.pricing-features li {
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1.5rem;
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.pricing-features li:before {
-  content: "✓";
-  color: var(--primary-color);
-  position: absolute;
-  left: 0;
+.contact p {
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.popular {
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--primary-color);
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #3a86ff;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
 }
 
-.popular-badge {
-  position: absolute;
-  top: 20px;
-  right: -30px;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem 3rem;
-  transform: rotate(45deg);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(58, 134, 255, 0.4);
 }
 
-/* 页脚样式 */
-.footer {
-  background-color: var(--secondary-color);
-  color: white;
-  padding: 3rem 0;
+/* 页脚 */
+footer {
+    background-color: #2b2d42;
+    color: #fff;
+    padding: 60px 0 30px;
 }
 
 .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 2rem;
+.footer-logo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-.footer-section h3 {
-  color: white;
-  margin-bottom: 1.5rem;
+.footer-logo p {
+    color: #b8b8b8;
 }
 
-.footer-links {
-  list-style: none;
+.footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
-.footer-links li {
-  margin-bottom: 0.75rem;
+.footer-links ul li {
+    margin-bottom: 10px;
 }
 
-.footer-links a {
-  color: #b3b3cc;
+.footer-links ul li a {
+    color: #b8b8b8;
+    transition: color 0.3s;
 }
 
-.footer-links a:hover {
-  color: white;
+.footer-links ul li a:hover {
+    color: #fff;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b8b8b8;
 }
 
-/* 法律页面样式 */
-.legal-content {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: var(--bg-color);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+/* 定价页面专用样式 */
+.pricing-hero {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, #7209b7, #3a86ff);
+    color: #fff;
+    text-align: center;
 }
 
-.legal-content h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.pricing-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.legal-content p, .legal-content ul, .legal-content ol {
-  margin-bottom: 1rem;
+.pricing-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.legal-content ul, .legal-content ol {
-  margin-left: 2rem;
+.pricing-plans {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.plan-card {
+    background-color: #f9f9fd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.featured {
+    border: 2px solid #3a86ff;
+    transform: scale(1.05);
+}
+
+.plan-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.plan-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.plan-header {
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.plan-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a86ff;
+    margin-bottom: 10px;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+}
+
+.plan-features {
+    padding: 30px;
+}
+
+.plan-features ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.plan-features ul li:last-child {
+    border-bottom: none;
+}
+
+.plan-footer {
+    padding: 30px;
+    text-align: center;
+}
+
+.plan-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #3a86ff;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.plan-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(58, 134, 255, 0.3);
+}
+
+.plan-button.featured {
+    background-color: #ff6b6b;
+}
+
+.plan-button.featured:hover {
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+/* FAQ部分 */
+.faq {
+    padding: 100px 0;
+    background-color: #f9f9fd;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #3a86ff;
+}
+
+.faq-item p {
+    color: #666;
+}
+
+/* 行动召唤 */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #3a86ff, #7209b7);
+    color: #fff;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.75rem;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .nav {
-    flex-direction: column;
-  }
-  
-  .nav-links {
-    margin-top: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .nav-links li {
-    margin: 0.5rem;
-  }
-  
-  .features-grid, .pricing-plans {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-content {
-    flex-direction: column;
-  }
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .features h2,
+    .testimonials h2,
+    .contact h2, 
+    .pricing-hero h1,
+    .faq h2,
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .plan-card.featured {
+        transform: none;
+    }
+    
+    .plan-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* 自动续订信息样式 */
-.subscription-info {
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 2rem 0;
-  font-size: 0.9rem;
-  color: var(--light-text);
-}
-
-/* 折扣标签 */
-.discount-tag {
-  display: inline-block;
-  background-color: #ff6b6b;
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-  font-weight: 700;
+@media (max-width: 480px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero-button,
+    .contact-button,
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
 }
