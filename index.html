@@ -41,7 +41,7 @@
                 <img src="assets/hero-image.png" alt="AetherFlow Chrome Extension" class="primary-image">
                 <div class="video-container">
                     <div class="video-placeholder" onclick="playDemo()">
-                        <img src="assets/video-thumbnail.png" alt="Demo video thumbnail">
+                        <img src="assets/video-thumbnail.jpg" alt="AetherFlow Demo video thumbnail">
                         <div class="play-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -270,9 +270,9 @@
 
     <script>
         function playDemo() {
-            // 替换成YouTube嵌入视频
+            // 播放YouTube产品演示视频
             const videoContainer = document.querySelector('.video-container');
-            videoContainer.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/vSwZ517-0Wg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            videoContainer.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         }
     </script>
 </body>
