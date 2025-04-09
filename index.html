@@ -1,176 +1,103 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paddle - 全球支付解决方案</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>AetherFlow - 智能AI助手</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header class="header">
+    <header>
         <div class="container">
-            <nav class="nav">
-                <div class="logo">Paddle</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">首页</a></li>
+            <div class="logo">
+                <h1>AetherFlow</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
                     <li><a href="pricing.html">价格</a></li>
-                    <li><a href="terms-of-service.html">服务条款</a></li>
-                    <li><a href="privacy-policy.html">隐私政策</a></li>
-                    <li><a href="refund-policy.html">退款政策</a></li>
-                    <li><a href="#" class="btn btn-primary">立即注册</a></li>
+                    <li><a href="#features">功能</a></li>
+                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- 英雄区域 -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>简化您的全球支付流程</h1>
-                <p>Paddle 是一个全球支付处理商，帮助您接收来自全球的付款，管理订阅，并处理税务合规问题。</p>
-                <a href="#" class="btn btn-primary">开始使用</a>
-                <a href="#features" class="btn btn-outline">了解更多</a>
-            </div>
+            <h1>提升你的生产力与创造力</h1>
+            <p>AetherFlow是一款强大的AI助手，帮助您更高效地处理日常任务，激发创意潜能，并简化工作流程。</p>
+            <a href="pricing.html" class="cta-button">立即开始</a>
         </div>
     </section>
 
-    <!-- 功能区域 -->
     <section id="features" class="features">
         <div class="container">
-            <div class="features-heading">
-                <h2>为什么选择 Paddle？</h2>
-                <p>我们提供全面的支付解决方案，帮助您扩展业务规模</p>
-            </div>
-            <div class="features-grid">
+            <h2>主要功能</h2>
+            <div class="feature-grid">
                 <div class="feature-card">
-                    <i class="fas fa-globe fa-3x" style="color: var(--primary-color);"></i>
-                    <h3>全球支付</h3>
-                    <p>接受来自全球超过200个国家和地区的付款，支持多种货币和支付方式。</p>
+                    <h3>智能文本辅助</h3>
+                    <p>利用先进的AI算法，帮助您创建、编辑和优化各类文本内容。</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-shield-alt fa-3x" style="color: var(--primary-color);"></i>
-                    <h3>商业实体</h3>
-                    <p>Paddle 作为卖家，为您处理所有法律及税务合规问题，让您专注于产品开发。</p>
+                    <h3>多语言支持</h3>
+                    <p>支持多种语言，满足全球用户的需求。</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-sync-alt fa-3x" style="color: var(--primary-color);"></i>
-                    <h3>订阅管理</h3>
-                    <p>轻松管理订阅生命周期，包括试用期、升级、降级和取消等。</p>
+                    <h3>自动化工作流</h3>
+                    <p>简化重复性任务，让您专注于真正重要的工作。</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-chart-line fa-3x" style="color: var(--primary-color);"></i>
                     <h3>数据分析</h3>
-                    <p>获取详细的销售分析和客户洞察，帮助您做出更明智的业务决策。</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-calculator fa-3x" style="color: var(--primary-color);"></i>
-                    <h3>税务管理</h3>
-                    <p>自动计算和收取适当的税款，确保全球税务合规。</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-code fa-3x" style="color: var(--primary-color);"></i>
-                    <h3>灵活集成</h3>
-                    <p>通过 API 或预构建的结账页面轻松集成到您的网站或应用程序中。</p>
+                    <p>快速处理和分析数据，提供有价值的见解。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 价格区域预览 -->
-    <section class="pricing">
+    <section class="testimonials">
         <div class="container">
-            <div class="pricing-heading">
-                <h2>简单透明的价格</h2>
-                <p>选择最适合您业务需求的计划</p>
-            </div>
-            <div class="pricing-plans">
-                <div class="pricing-card">
-                    <h3>基础版</h3>
-                    <div class="price">$29<small>/月</small></div>
-                    <p>适合初创企业和小型团队</p>
-                    <ul class="pricing-features">
-                        <li>基本支付处理</li>
-                        <li>每月销售额限制 $10,000</li>
-                        <li>标准支持</li>
-                        <li>基本分析</li>
-                    </ul>
-                    <a href="pricing.html" class="btn btn-outline">查看详情</a>
+            <h2>用户评价</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"AetherFlow彻底改变了我的工作方式，节省了我每天至少2小时的时间。"</p>
+                    <cite>- 张明，内容创作者</cite>
                 </div>
-                <div class="pricing-card popular">
-                    <span class="popular-badge">最受欢迎</span>
-                    <h3>专业版</h3>
-                    <div class="price">$79<small>/月</small></div>
-                    <p>适合成长中的企业</p>
-                    <ul class="pricing-features">
-                        <li>高级支付处理</li>
-                        <li>每月销售额限制 $50,000</li>
-                        <li>优先支持</li>
-                        <li>高级分析</li>
-                        <li>订阅管理</li>
-                    </ul>
-                    <a href="pricing.html" class="btn btn-primary">查看详情</a>
+                <div class="testimonial">
+                    <p>"作为一名程序员，AetherFlow帮助我更快地解决编程问题，提高了我的工作效率。"</p>
+                    <cite>- 李华，软件工程师</cite>
                 </div>
-                <div class="pricing-card">
-                    <h3>企业版</h3>
-                    <div class="price">$299<small>/月</small></div>
-                    <p>适合大型企业和高交易量</p>
-                    <ul class="pricing-features">
-                        <li>全功能支付处理</li>
-                        <li>无限销售额</li>
-                        <li>24/7专属支持</li>
-                        <li>定制分析</li>
-                        <li>高级订阅管理</li>
-                        <li>自定义集成</li>
-                    </ul>
-                    <a href="pricing.html" class="btn btn-outline">查看详情</a>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="pricing.html" class="btn btn-primary">查看所有价格方案</a>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
-    <footer class="footer">
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <p>有任何问题或建议？请随时与我们联系。</p>
+            <a href="mailto:support@aetherflow.com" class="contact-button">发送邮件</a>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Paddle</h3>
-                    <p>全球支付服务提供商，为数字产品和服务提供完整的支付解决方案。</p>
+                <div class="footer-logo">
+                    <h3>AetherFlow</h3>
+                    <p>智能AI助手</p>
                 </div>
-                <div class="footer-section">
-                    <h3>服务</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">支付处理</a></li>
-                        <li><a href="#">订阅管理</a></li>
-                        <li><a href="#">税务合规</a></li>
-                        <li><a href="#">全球商家服务</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>公司</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">关于我们</a></li>
-                        <li><a href="#">联系我们</a></li>
-                        <li><a href="#">工作机会</a></li>
-                        <li><a href="#">博客</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>法律</h3>
-                    <ul class="footer-links">
-                        <li><a href="terms-of-service.html">服务条款</a></li>
-                        <li><a href="privacy-policy.html">隐私政策</a></li>
-                        <li><a href="refund-policy.html">退款政策</a></li>
+                <div class="footer-links">
+                    <h4>链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="pricing.html">价格</a></li>
+                        <li><a href="terms.html">服务条款</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Paddle. 保留所有权利。</p>
+            <div class="copyright">
+                <p>&copy; 2023 AetherFlow. 保留所有权利。</p>
             </div>
         </div>
     </footer>
