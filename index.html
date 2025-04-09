@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherFlow - AI Prompt Management Chrome Extension</title>
+    <meta name="description" content="AetherFlow is a Chrome extension that helps you manage and optimize AI prompts, boosting your productivity with AI tools.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- 为通过验证添加favicon -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADGUlEQVRYCe1WTWgTQRR+s5tN0jRNqj3Yih5EEKynCnoQBBFEPAjqzYsXvVjx4A8evIjgwYsXL6IgeBHx5sWfg+JBKYiIIFYrWGxttbVpmk2y2d3xvdkkm+xuukVBpH1hmHnz3rz3zXvzvokhTmdp6ztL01+ePzJcbcqhqppVVeN+Ku7zXAKsS5FPC1iH3aPLNH24Qdo0R42ZYPCcDuqaF9qQFBo92TmfgIubbgx8THi+TvBvR00z1BHf094pJt/GyF0LMfEiSp+m04XaFSdtXW5UNbcuB4LhUUXVLmR9U7pqZQ9+vMnqjEJAjKcM5smmzMijY4xnZwqVg0YyjEfj3Q/HRG1CKqtMNXaJ0VSLffO8H8pMPavOZSZlRqO22eZHbjzc4mBvr8jNz2eqq0uHVt44uLrBYL+A9+ZPg/YvTJGRmcr6Oi6FjHafgkB49GLIHN0GcBOAc8Wy+WXAXrhRtZwzb2AXTJZJc/dL7Ek2+7k/LMH0Zzuh0QHv+RMdCIS3j6jqwecY2Ffpp2WOZedhxlj2mLcE29PEZWVuTgLfurkzt+3ASGNvg73gBuJTr16UY7xGgL/bvVHT1JZQ0j3v/k6IZpN4nYwzlsuTW2jYj7ViZQGV90TaHfwxQSaBs+cY39CmDJYWLJKbVshhXtYBATlqo6Iv4sFIhz4JuBtQ8DxBSe8b5CbHGU/NmMoFV1q0AxIY0KPJA/tPBG+Dd2ycIvqS8R2PwU/mU6I9P5/JHr5RreUDpFvj2mY44DXwVVRXkmLfk9sgx8BxVrb56Jdv2WPeVaA1VufbXuP2XRNNtFjxV0EyeXj/7eDqoYb86fMUOPNYhKcRvYQiHB8x8EsvLQFYgScCXAL/vP7I4dcTgU+3V3rWFHlH+aUnEK5GzZJ+IOflIefRXsD97bpg0NvH79wqRCbT+YKb+UGO9JJ+9N5ZX9A3ywkpPcJOXfxS6bLT1sVu4yzOsrynvDyTpsDaYjYIQUAKHAKyPcb8zAZULw34nt+AF9BvwKV4Eo+OXk0AAAAASUVORK5CYII=">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">AetherFlow</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="https://chrome.google.com/webstore/detail/aetherflow/your-extension-id" target="_blank">Install</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="container">
+            <h1>AI Prompt Management & Optimization</h1>
+            <p>Boost your productivity with AI tools by efficiently managing, optimizing, and reusing your AI prompts.</p>
+            <div>
+                <a href="pricing.html" class="btn btn-primary">View Pricing</a>
+                <a href="https://chrome.google.com/webstore/detail/aetherflow/your-extension-id" class="btn btn-outline">Install Extension</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Quick Prompt Access</h3>
+                    <p>Use the "/" shortcut command to instantly call up saved prompts in any AI platform.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Prompt Library</h3>
+                    <p>Organize your prompts in a visually intuitive card-based library for easy retrieval.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>AI-Powered Optimization</h3>
+                    <p>Analyze and improve your prompts using advanced language models for better AI responses.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cross-Device Sync</h3>
+                    <p>Seamlessly access your prompt library across all your devices with cloud synchronization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free Plan</h3>
+                    <div class="price">$0<span class="price-duration">/forever</span></div>
+                    <p>Perfect for casual AI users.</p>
+                    <ul class="pricing-features">
+                        <li>Store up to 5 prompts</li>
+                        <li>3 optimizations per day</li>
+                        <li>Basic features</li>
+                        <li>Single device use</li>
+                    </ul>
+                    <a href="https://chrome.google.com/webstore/detail/aetherflow/your-extension-id" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="popular-badge">Most Popular</span>
+                    <h3>Pro Plan</h3>
+                    <div class="price">$4.99<span class="price-duration">/month</span></div>
+                    <p>Best for power users and professionals.</p>
+                    <ul class="pricing-features">
+                        <li>Store up to 100 prompts</li>
+                        <li>50 optimizations per day</li>
+                        <li>All advanced features</li>
+                        <li>Multi-device synchronization</li>
+                        <li>Advanced data export</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="pricing.html#pro" class="btn btn-primary">Upgrade to Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AetherFlow</h3>
+                    <p>Enhancing your AI workflow with smart prompt management.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="https://chrome.google.com/webstore/detail/aetherflow/your-extension-id">Install</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@aetherflow.example.com">support@aetherflow.example.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AetherFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
