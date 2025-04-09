@@ -1,213 +1,171 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>价格方案 - Paddle</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>AetherFlow - 定价</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header class="header">
+    <header>
         <div class="container">
-            <nav class="nav">
-                <div class="logo">Paddle</div>
-                <ul class="nav-links">
+            <div class="logo">
+                <h1>AetherFlow</h1>
+            </div>
+            <nav>
+                <ul>
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="pricing.html">价格</a></li>
-                    <li><a href="terms-of-service.html">服务条款</a></li>
-                    <li><a href="privacy-policy.html">隐私政策</a></li>
-                    <li><a href="refund-policy.html">退款政策</a></li>
-                    <li><a href="#" class="btn btn-primary">立即注册</a></li>
+                    <li><a href="pricing.html" class="active">价格</a></li>
+                    <li><a href="index.html#features">功能</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- 价格页头部 -->
-    <section class="pricing-header">
+    <section class="pricing-hero">
         <div class="container">
-            <h1>选择最适合您业务的方案</h1>
-            <p>我们提供灵活的订阅计划，满足从初创企业到大型企业的各种需求</p>
-            
-            <!-- 切换按钮 -->
-            <div class="pricing-toggle">
-                <span>按月付款</span>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-                <span class="active">按年付款</span>
-                <span class="discount-tag">节省20%</span>
-            </div>
+            <h1>选择最适合您的方案</h1>
+            <p>我们提供灵活的定价方案，以满足个人和企业的不同需求。</p>
         </div>
     </section>
 
-    <!-- 价格方案 -->
-    <section class="pricing full-pricing">
+    <section class="pricing-plans">
         <div class="container">
-            <div class="pricing-plans">
-                <!-- 基础版 -->
-                <div class="pricing-card">
-                    <h3>基础版</h3>
-                    <div class="price">$290<small>/年</small></div>
-                    <p class="monthly-equivalent">相当于 $24.17/月</p>
-                    <p>适合初创企业和小型团队</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 基本支付处理</li>
-                        <li><i class="fas fa-check"></i> 每月销售额限制 $10,000</li>
-                        <li><i class="fas fa-check"></i> 标准支持 (工作日邮件支持)</li>
-                        <li><i class="fas fa-check"></i> 基本销售分析</li>
-                        <li><i class="fas fa-check"></i> 最多 3 个产品</li>
-                        <li><i class="fas fa-check"></i> 支持信用卡支付</li>
-                        <li><i class="fas fa-check"></i> 基本发票生成</li>
-                        <li><i class="fas fa-times"></i> 高级订阅管理</li>
-                        <li><i class="fas fa-times"></i> API 访问</li>
-                        <li><i class="fas fa-times"></i> 定制结账页面</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">选择基础版</a>
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2>基础版</h2>
+                        <p class="price">¥49<span>/月</span></p>
+                        <p>适合个人用户</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>基本AI助手功能</li>
+                            <li>每月50,000字的处理量</li>
+                            <li>5个自定义模板</li>
+                            <li>基础客户支持</li>
+                            <li>移动端应用访问</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="#" class="plan-button" data-plan="basic">立即购买</a>
+                    </div>
                 </div>
-                
-                <!-- 专业版 -->
-                <div class="pricing-card popular">
-                    <span class="popular-badge">最受欢迎</span>
-                    <h3>专业版</h3>
-                    <div class="price">$790<small>/年</small></div>
-                    <p class="monthly-equivalent">相当于 $65.83/月</p>
-                    <p>适合成长中的企业</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 高级支付处理</li>
-                        <li><i class="fas fa-check"></i> 每月销售额限制 $50,000</li>
-                        <li><i class="fas fa-check"></i> 优先支持 (工作日实时聊天)</li>
-                        <li><i class="fas fa-check"></i> 高级销售分析</li>
-                        <li><i class="fas fa-check"></i> 最多 10 个产品</li>
-                        <li><i class="fas fa-check"></i> 支持信用卡和 PayPal 支付</li>
-                        <li><i class="fas fa-check"></i> 完整发票管理</li>
-                        <li><i class="fas fa-check"></i> 订阅管理工具</li>
-                        <li><i class="fas fa-check"></i> 基本 API 访问</li>
-                        <li><i class="fas fa-check"></i> 品牌结账页面</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">选择专业版</a>
+
+                <div class="plan-card featured">
+                    <div class="plan-tag">最受欢迎</div>
+                    <div class="plan-header">
+                        <h2>专业版</h2>
+                        <p class="price">¥99<span>/月</span></p>
+                        <p>适合专业创作者</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>全部基础版功能</li>
+                            <li>每月200,000字的处理量</li>
+                            <li>20个自定义模板</li>
+                            <li>优先客户支持</li>
+                            <li>高级AI功能</li>
+                            <li>数据分析工具</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="#" class="plan-button featured" data-plan="pro">立即购买</a>
+                    </div>
                 </div>
-                
-                <!-- 企业版 -->
-                <div class="pricing-card">
-                    <h3>企业版</h3>
-                    <div class="price">$2,990<small>/年</small></div>
-                    <p class="monthly-equivalent">相当于 $249.17/月</p>
-                    <p>适合大型企业和高交易量</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 全功能支付处理</li>
-                        <li><i class="fas fa-check"></i> 无限销售额</li>
-                        <li><i class="fas fa-check"></i> 24/7 专属支持</li>
-                        <li><i class="fas fa-check"></i> 定制分析和报告</li>
-                        <li><i class="fas fa-check"></i> 无限产品</li>
-                        <li><i class="fas fa-check"></i> 支持所有主流支付方式</li>
-                        <li><i class="fas fa-check"></i> 高级发票和税务管理</li>
-                        <li><i class="fas fa-check"></i> 高级订阅管理</li>
-                        <li><i class="fas fa-check"></i> 完整 API 访问权限</li>
-                        <li><i class="fas fa-check"></i> 完全定制的结账体验</li>
-                        <li><i class="fas fa-check"></i> 专属账户经理</li>
-                        <li><i class="fas fa-check"></i> 优先功能请求</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">选择企业版</a>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2>企业版</h2>
+                        <p class="price">¥299<span>/月</span></p>
+                        <p>适合团队和企业</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>全部专业版功能</li>
+                            <li>无限字数处理</li>
+                            <li>无限自定义模板</li>
+                            <li>24/7专属客户支持</li>
+                            <li>API访问</li>
+                            <li>团队协作功能</li>
+                            <li>自定义AI训练</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="#" class="plan-button" data-plan="enterprise">立即购买</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 定制方案 -->
-    <section class="custom-plan">
-        <div class="container">
-            <div class="custom-plan-content">
-                <div class="custom-plan-text">
-                    <h2>需要定制方案？</h2>
-                    <p>我们了解每个企业都有独特的需求。联系我们的销售团队，我们将为您定制最适合的支付解决方案。</p>
-                    <a href="#" class="btn btn-primary">联系销售</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 常见问题 -->
     <section class="faq">
         <div class="container">
             <h2>常见问题</h2>
-            <div class="faq-items">
+            <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>我可以随时更改我的订阅计划吗？</h3>
-                    <p>是的，您可以随时升级或降级您的订阅计划。如果您升级，将立即生效，并根据剩余订阅期限按比例收费。如果您降级，新的价格将在当前计费周期结束后生效。</p>
+                    <h3>如何选择最适合我的方案？</h3>
+                    <p>根据您的使用需求和预算选择合适的方案。个人用户可选择基础版，专业创作者建议选择专业版，而团队和企业则更适合企业版。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>交易手续费是多少？</h3>
-                    <p>所有计划都包含标准交易手续费，为交易金额的 2.9% + $0.30。企业计划可享受定制费率，具体取决于您的销售量和业务类型。</p>
+                    <h3>我可以随时更改我的订阅方案吗？</h3>
+                    <p>是的，您可以随时升级或降级您的订阅方案。升级后立即生效，降级则在当前计费周期结束后生效。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>是否支持国际销售？</h3>
-                    <p>是的，Paddle 支持全球 200 多个国家和地区的付款，并自动处理货币兑换和税务合规问题。</p>
+                    <h3>如何付款？</h3>
+                    <p>我们支持信用卡、PayPal和银行转账等多种付款方式。所有交易均通过安全的支付网关处理，确保您的支付信息安全。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>我可以获得免费试用吗？</h3>
-                    <p>是的，我们提供 14 天的免费试用，让您体验所有专业版功能，无需信用卡。试用期结束后，您可以选择合适的计划继续使用。</p>
-                </div>
-                <div class="faq-item">
-                    <h3>如何获取技术支持？</h3>
-                    <p>所有计划都包含邮件支持。专业版用户可以访问工作日实时聊天支持，而企业版用户享有 24/7 全天候专属支持和专属账户经理。</p>
+                    <h3>是否提供退款？</h3>
+                    <p>我们提供14天无条件退款保证。如果您在前14天内不满意我们的服务，可以申请全额退款。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 行动号召 -->
     <section class="cta">
         <div class="container">
-            <h2>准备好简化您的支付流程了吗？</h2>
-            <p>今天开始使用 Paddle，享受无忧的全球支付体验</p>
-            <a href="#" class="btn btn-primary">立即开始</a>
-            <a href="#" class="btn btn-outline">预约演示</a>
+            <h2>准备好开始使用AetherFlow了吗？</h2>
+            <p>立即注册，体验AI助手带来的高效和便捷。</p>
+            <a href="#" class="cta-button">免费试用7天</a>
         </div>
     </section>
 
-    <!-- 页脚 -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Paddle</h3>
-                    <p>全球支付服务提供商，为数字产品和服务提供完整的支付解决方案。</p>
+                <div class="footer-logo">
+                    <h3>AetherFlow</h3>
+                    <p>智能AI助手</p>
                 </div>
-                <div class="footer-section">
-                    <h3>服务</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">支付处理</a></li>
-                        <li><a href="#">订阅管理</a></li>
-                        <li><a href="#">税务合规</a></li>
-                        <li><a href="#">全球商家服务</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>公司</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">关于我们</a></li>
-                        <li><a href="#">联系我们</a></li>
-                        <li><a href="#">工作机会</a></li>
-                        <li><a href="#">博客</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>法律</h3>
-                    <ul class="footer-links">
-                        <li><a href="terms-of-service.html">服务条款</a></li>
-                        <li><a href="privacy-policy.html">隐私政策</a></li>
-                        <li><a href="refund-policy.html">退款政策</a></li>
+                <div class="footer-links">
+                    <h4>链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="pricing.html">价格</a></li>
+                        <li><a href="terms.html">服务条款</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Paddle. 保留所有权利。</p>
+            <div class="copyright">
+                <p>&copy; 2023 AetherFlow. 保留所有权利。</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // 模拟Paddle支付渠道集成
+        document.querySelectorAll('.plan-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const plan = this.getAttribute('data-plan');
+                alert(`您选择了${plan}方案，即将跳转到支付页面...`);
+                // 这里可以添加实际的Paddle支付跳转代码
+                // window.location.href = `https://checkout.paddle.com/checkout/product/xxx?plan=${plan}`;
+            });
+        });
+    </script>
 </body>
 </html>
