@@ -272,8 +272,25 @@
         function playDemo() {
             // 使用YouTube视频嵌入功能
             const videoContainer = document.querySelector('.video-container');
-            videoContainer.innerHTML = '<iframe width="100%" height="350" src="https://www.youtube.com/embed/vSwZ517-0Wg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            videoContainer.innerHTML = '<iframe width="100%" height="350" src="https://www.youtube.com/embed/vSwZ517-0Wg?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            
+            // 控制台输出以帮助调试
+            console.log('Video play function triggered');
         }
+        
+        // 确保页面加载完成后添加事件监听器
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoPlaceholder = document.querySelector('.video-placeholder');
+            if (videoPlaceholder) {
+                videoPlaceholder.addEventListener('click', function() {
+                    playDemo();
+                    console.log('Video placeholder clicked');
+                });
+                console.log('Video placeholder event listener added');
+            } else {
+                console.log('Video placeholder not found');
+            }
+        });
     </script>
 </body>
 </html> 
