@@ -39,15 +39,21 @@
             </div>
             <div class="hero-image">
                 <img src="assets/hero-image.png" alt="AetherFlow Chrome Extension" class="primary-image">
-                <div class="video-container">
-                    <div class="video-placeholder" onclick="playDemo()">
-                        <img src="assets/video-thumbnail.png" alt="Demo video thumbnail">
-                        <div class="play-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                            </svg>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2>See AetherFlow in Action</h2>
+            <div class="video-container">
+                <div class="video-placeholder" onclick="playDemo()">
+                    <img src="assets/video-thumbnail.png" alt="Demo video thumbnail">
+                    <div class="play-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -269,28 +275,19 @@
     </footer>
 
     <script>
-        function playDemo() {
-            // 使用YouTube视频嵌入功能
-            const videoContainer = document.querySelector('.video-container');
-            videoContainer.innerHTML = '<iframe width="100%" height="350" src="https://www.youtube.com/embed/vSwZ517-0Wg?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            
-            // 控制台输出以帮助调试
-            console.log('Video play function triggered');
-        }
-        
-        // 确保页面加载完成后添加事件监听器
         document.addEventListener('DOMContentLoaded', function() {
+            // 添加视频播放事件监听器
             const videoPlaceholder = document.querySelector('.video-placeholder');
             if (videoPlaceholder) {
-                videoPlaceholder.addEventListener('click', function() {
-                    playDemo();
-                    console.log('Video placeholder clicked');
-                });
-                console.log('Video placeholder event listener added');
-            } else {
-                console.log('Video placeholder not found');
+                videoPlaceholder.addEventListener('click', playDemo);
             }
         });
+
+        function playDemo() {
+            const videoContainer = document.querySelector('.video-container');
+            // 替换视频容器内容为YouTube嵌入式播放器
+            videoContainer.innerHTML = '<div class="embed-responsive"><iframe width="100%" height="450" src="https://www.youtube.com/embed/vSwZ517-0Wg?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+        }
     </script>
 </body>
 </html> 
